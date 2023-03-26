@@ -101,6 +101,8 @@ namespace ET
                         (bool isNewPlayer, Unit unit) = await UnitHelper.LoadUnit(player);
 
                         //unit.AddComponent<UnitGateComponent, long>(session.InstanceId);
+                        //存储Player的InstanceId，当从服务器通过Unit发消息给客户端时，先发送给网关上对应的Player，
+                        //再通过Player上引用的ClientSession转发给客户端(SessionStreamDispatcherServerInner)
                         unit.AddComponent<UnitGateComponent, long>(player.InstanceId);
 
                         player.ChatInfoInstanceId = await this.EnterWorldChatServer(unit); //登录聊天服
@@ -121,7 +123,7 @@ namespace ET
                             SessionStateComponent = session.AddComponent<SessionStateComponent>();
                         }
                         SessionStateComponent.State = SessionState.Game;
-
+ 
                         player.PlayerState = PlayerState.Game;
                     }
                     catch (Exception e)

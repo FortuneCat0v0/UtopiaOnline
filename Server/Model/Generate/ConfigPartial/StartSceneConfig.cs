@@ -20,6 +20,7 @@ namespace ET
         
         public List<StartSceneConfig> Robots = new List<StartSceneConfig>();
         
+        //每个区一个缓存服
         public Dictionary<int, StartSceneConfig> UnitCaches = new Dictionary<int, StartSceneConfig>();
         
         public List<StartSceneConfig> GetByProcess(int process)

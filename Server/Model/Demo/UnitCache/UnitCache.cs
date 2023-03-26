@@ -13,6 +13,9 @@ namespace ET
     {
         public string key;
 
+        /// <summary>
+        /// UnitID身上的实体
+        /// </summary>
         public Dictionary<long, Entity> CacheCompoenntsDictionary = new Dictionary<long, Entity>();
     }
 }

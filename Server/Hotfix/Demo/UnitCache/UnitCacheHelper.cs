@@ -20,7 +20,7 @@ namespace ET
         }
         
         /// <summary>
-        /// 获取玩家缓存
+        /// 从UnitCache缓存服获取玩家缓存，如果没有，则从数据库中获取，挂载在MapScene的UnitComponent上
         /// </summary>
         /// <param name="scene"></param>
         /// <param name="unitId"></param>
@@ -54,10 +54,10 @@ namespace ET
         }
 
         /// <summary>
-        /// 获取玩家组件缓存
+        /// 获取玩家某个组件缓存
         /// </summary>
         /// <param name="unitId"></param>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">Unit上组件的类型</typeparam>
         /// <returns></returns>
         public static async ETTask<T> GetUnitComponentCache<T>(long unitId) where T : Entity, IUnitCache
         {

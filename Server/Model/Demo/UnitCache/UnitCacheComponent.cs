@@ -8,6 +8,7 @@ namespace ET
     {
         public Dictionary<string, UnitCache> UnitCaches = new Dictionary<string, UnitCache>();
 
+        //所有继承ICache的类型
         public List<string> UnitCacheKeyList = new List<string>();
 
     }

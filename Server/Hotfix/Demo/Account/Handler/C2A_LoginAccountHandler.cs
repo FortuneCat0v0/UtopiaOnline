@@ -60,9 +60,10 @@ namespace ET
                 session.AddComponent<RoleInfosZone>();
             }
             
-
+            //防止同一用户短时间频繁登录
             using (session.AddComponent<SessionLockingComponent>())
             {
+                //防止不同用户同时用相同的账号密码登录
                 using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.LoginAccount,request.AccountName.Trim().GetHashCode()))
                 {
                     var accountInfoList = await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Query<Account>(d=>d.AccountName.Equals(request.AccountName.Trim()));

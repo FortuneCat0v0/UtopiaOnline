@@ -23,11 +23,13 @@ namespace ET
 
 		public static void ShowWindow(this DlgBag self, Entity contextData = null)
 		{
+			//打开背包，默认显示武器界面
 			self.View.E_WeaponToggle.IsSelected(true);
 		}
 
 		public static void HideWindow(this DlgBag self)
 		{
+			//回收循环列表项
 			self.RemoveUIScrollItems(ref self.ScrollItemBagItems);
 		}
 		

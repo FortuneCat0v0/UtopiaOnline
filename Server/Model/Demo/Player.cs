@@ -11,6 +11,9 @@
 	{
 		public long AccountId { get;  set; }
 		
+		/// <summary>
+		/// 与RoleId相同
+		/// </summary>
 		public long UnitId { get; set; }
 
 		public PlayerState PlayerState { get; set; }

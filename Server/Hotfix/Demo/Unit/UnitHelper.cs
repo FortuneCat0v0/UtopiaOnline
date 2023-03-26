@@ -71,7 +71,12 @@ namespace ET
             MessageHelper.SendToClient(unit, removeUnits);
         }
         
-        
+        /// <summary>
+        /// 给Player添加GateMapComponent组件，并创建一个Map Scene赋值给GateMapComponent组件。从缓存服获取Unit挂载在Map Scene下，如果查询不到，
+        /// 则创建一个Unit,并更新到UnitCache服上
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
         public static async ETTask<(bool, Unit)> LoadUnit(Player player)
         {
             GateMapComponent gateMapComponent = player.AddComponent<GateMapComponent>();

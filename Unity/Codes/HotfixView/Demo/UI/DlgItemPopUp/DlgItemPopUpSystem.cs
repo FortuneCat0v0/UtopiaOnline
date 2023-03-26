@@ -84,7 +84,7 @@ namespace ET
 				if (errorCode != ErrorCode.ERR_Success)
 				{
 					Log.Error(errorCode.ToString());
-					return;
+					return; 
 				}
 				self.ZoneScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_ItemPopUp);
 				self.ZoneScene().GetComponent<UIComponent>().GetDlgLogic<DlgBag>().Refresh();

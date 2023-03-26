@@ -41,7 +41,7 @@ namespace ET
                 case AppType.Server:
                 {
                     Game.Scene.AddComponent<NetInnerComponent, IPEndPoint, int>(processConfig.InnerIPPort, SessionStreamDispatcherType.SessionStreamDispatcherServerInner);
-
+                    //创建服务器上需要的Scene
                     var processScenes = StartSceneConfigCategory.Instance.GetByProcess(Game.Options.Process);
                     foreach (StartSceneConfig startConfig in processScenes)
                     {

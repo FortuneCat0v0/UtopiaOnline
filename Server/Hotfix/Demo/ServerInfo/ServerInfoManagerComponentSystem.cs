@@ -37,6 +37,7 @@
         {
             var serverInfoList = await DBManagerComponent.Instance.GetZoneDB(self.DomainZone()).Query<ServerInfo>(d => true);
 
+            //若数据库中没有数据，从配置表中获取并存入数据库。实际商业游戏有后台配置
             if (serverInfoList == null || serverInfoList.Count <= 0)
             {
                 Log.Error("serverInfo  count is zero");

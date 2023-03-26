@@ -15,7 +15,7 @@ namespace ET
 					Player player = Game.EventSystem.Get(self.PlayerInstanceId) as Player;
 					DisconnectHelper.KickPlayer(player).Coroutine();
 				}
-
+				
 				self.AccountId = 0;
 				self.PlayerId = 0;
 				self.PlayerInstanceId = 0;
