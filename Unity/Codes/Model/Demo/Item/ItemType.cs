@@ -9,6 +9,10 @@
         Armor    = 1, //防具
         Ring     = 2, //戒指
         Prop     = 3, //道具
+        Head     = 4, //头盔
+        Clothes  = 5, //衣服
+        Shoes    = 6, //鞋子
+        Shield   = 7, //盾牌
     }
 
     /// <summary>

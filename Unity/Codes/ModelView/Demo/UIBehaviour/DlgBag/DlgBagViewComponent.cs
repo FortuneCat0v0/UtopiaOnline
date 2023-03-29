@@ -92,6 +92,23 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Toggle E_HeadToggle
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_E_HeadToggle == null )
+     			{
+		    		this.m_E_HeadToggle = UIFindHelper.FindDeepChild<UnityEngine.UI.Toggle>(this.uiTransform.gameObject,"BackGround/E_TopButton/E_Head");
+     			}
+     			return this.m_E_HeadToggle;
+     		}
+     	}
+
 		public UnityEngine.UI.LoopVerticalScrollRect E_BagItemsLoopVerticalScrollRect
      	{
      		get
@@ -252,6 +269,7 @@ namespace ET
 			this.m_E_ArmorToggle = null;
 			this.m_E_RingToggle = null;
 			this.m_E_PropToggle = null;
+			this.m_E_HeadToggle = null;
 			this.m_E_BagItemsLoopVerticalScrollRect = null;
 			this.m_E_CloseButton = null;
 			this.m_E_CloseImage = null;
@@ -269,6 +287,7 @@ namespace ET
 		private UnityEngine.UI.Toggle m_E_ArmorToggle = null;
 		private UnityEngine.UI.Toggle m_E_RingToggle = null;
 		private UnityEngine.UI.Toggle m_E_PropToggle = null;
+		private UnityEngine.UI.Toggle m_E_HeadToggle = null;
 		private UnityEngine.UI.LoopVerticalScrollRect m_E_BagItemsLoopVerticalScrollRect = null;
 		private UnityEngine.UI.Button m_E_CloseButton = null;
 		private UnityEngine.UI.Image m_E_CloseImage = null;

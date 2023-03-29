@@ -23,17 +23,45 @@ namespace ET
             switch ((ItemType)item.Config.Type)
             {
                 case ItemType.Weapon:
+                {
+                    item.AddComponent<EquipInfoComponent>();
+                    break;
+                }
                 case ItemType.Armor:
+                {
+                    item.AddComponent<EquipInfoComponent>();
+                    break;
+                }
                 case ItemType.Ring:
                 {
                     item.AddComponent<EquipInfoComponent>();
-                }
                     break;
+                }
                 case ItemType.Prop:
                 {
-                    
+                    item.AddComponent<EquipInfoComponent>();
+                     break;
                 }
+                case ItemType.Head:
+                {
+                    item.AddComponent<EquipInfoComponent>();
+                    break;               
+                }
+                case ItemType.Clothes:
+                {
+                    item.AddComponent<EquipInfoComponent>();
+                    break;                 
+                }
+                case ItemType.Shoes:
+                {
+                    item.AddComponent<EquipInfoComponent>();
                     break;
+                }
+                case ItemType.Shield:
+                {
+                    item.AddComponent<EquipInfoComponent>();
+                    break;
+                }
             }
         }
 

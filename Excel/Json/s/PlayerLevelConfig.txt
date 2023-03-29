@@ -29,4 +29,10 @@
 {"_t":"PlayerLevelConfig","_id":28,"NeedExp":1},
 {"_t":"PlayerLevelConfig","_id":29,"NeedExp":1},
 {"_t":"PlayerLevelConfig","_id":30,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":31,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":32,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":33,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":34,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":35,"NeedExp":1},
+{"_t":"PlayerLevelConfig","_id":36,"NeedExp":1},
 ]}
