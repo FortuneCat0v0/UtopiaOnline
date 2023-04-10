@@ -11,5 +11,5 @@
 {"_t":"StartSceneConfig","_id":10,"Process":11,"Zone":1,"SceneType":"Map","Name":"Game","OuterPort":0},
 {"_t":"StartSceneConfig","_id":11,"Process":12,"Zone":1,"SceneType":"Rank","Name":"Rank","OuterPort":0},
 {"_t":"StartSceneConfig","_id":12,"Process":13,"Zone":1,"SceneType":"ChatInfo","Name":"ChatInfo","OuterPort":0},
-{"_t":"StartSceneConfig","_id":200,"Process":2,"Zone":2,"SceneType":"Robot","Name":"Robot01","OuterPort":0},
+{"_t":"StartSceneConfig","_id":200,"Process":2,"Zone":1,"SceneType":"Robot","Name":"Robot01","OuterPort":0},
 ]}
