@@ -22,7 +22,9 @@
         public const int MakeQueueUI = 1010;
         
         public const int RankUI = 1011;
-        
+
+        public const int MatchRound = 1012;
+
         // 不能超过10000
     }
 }

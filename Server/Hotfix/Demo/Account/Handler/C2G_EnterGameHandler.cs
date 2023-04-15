@@ -106,6 +106,7 @@ namespace ET
                         unit.AddComponent<UnitGateComponent, long>(player.InstanceId);
 
                         player.ChatInfoInstanceId = await this.EnterWorldChatServer(unit); //登录聊天服
+                        player.MatchInfoInstanceId = await this.EnterMatchServer(unit); // 登录匹配服
 
                         //玩家Unit上线后的初始化操作
                         await UnitHelper.InitUnit(unit, isNewPlayer);
@@ -151,6 +152,18 @@ namespace ET
             });
 
             return chat2GEnterChat.ChatInfoUnitInstanceId;
+        }
+
+        private async ETTask<long> EnterMatchServer(Unit unit)
+        {
+            StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.GetBySceneName(unit.DomainZone(), "Match");
+            Match2G_EnterMatch match2GEnterMatch =
+                    (Match2G_EnterMatch)await MessageHelper.CallActor(startSceneConfig.InstanceId, new G2Match_EnterMatch()
+                    {
+                        UnitId = unit.Id,
+                        GateSessionActorId = unit.GetComponent<UnitGateComponent>().GateSessionActorId
+                    });
+            return match2GEnterMatch.MatchInfoUnitInstanceId;
         }
     }
 }

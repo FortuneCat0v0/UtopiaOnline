@@ -746,3 +746,25 @@ message Chat2C_NoticeChatInfo // IActorMessage
 	string Name = 1;
 	string ChatMessage = 2;
 }
+
+//ResponseType Match2C_StartMatch
+message C2Match_StartMatch // IActorMatchRequest
+{
+	int32 RpcId = 1;
+}
+
+message Match2C_StartMatch // IActorMatchResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message Match2C_NoticePlayerEnter // IActorMessage
+{
+}
+message Match2C_NoticePlayerWait // IActorMessage
+{
+	string Message = 1;
+}
+

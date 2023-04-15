@@ -1434,4 +1434,44 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(Match2C_StartMatch))]
+	[Message(OuterOpcode.C2Match_StartMatch)]
+	[ProtoContract]
+	public partial class C2Match_StartMatch: Object, IActorMatchRequest
+	{
+		[ProtoMember(1)]
+		public int RpcId { get; set; }
+
+	}
+
+	[Message(OuterOpcode.Match2C_StartMatch)]
+	[ProtoContract]
+	public partial class Match2C_StartMatch: Object, IActorMatchResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+	}
+
+	[Message(OuterOpcode.Match2C_NoticePlayerEnter)]
+	[ProtoContract]
+	public partial class Match2C_NoticePlayerEnter: Object, IActorMessage
+	{
+	}
+
+	[Message(OuterOpcode.Match2C_NoticePlayerWait)]
+	[ProtoContract]
+	public partial class Match2C_NoticePlayerWait: Object, IActorMessage
+	{
+		[ProtoMember(1)]
+		public string Message { get; set; }
+
+	}
+
 }

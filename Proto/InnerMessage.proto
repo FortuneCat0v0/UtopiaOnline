@@ -368,3 +368,60 @@ message Chat2G_RequestExitChat // IActorResponse
     int32 Error = 91;
     string Message = 92;
 }
+
+//ResponseType Match2G_EnterMatch
+message G2Match_EnterMatch // IActorRequest
+{
+    int32 RpcId = 90;
+	int64 UnitId = 2;
+	int64 GateSessionActorId = 3;
+	
+}
+
+message Match2G_EnterMatch // IActorResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
+	int64 MatchInfoUnitInstanceId = 1;
+}
+
+//ResponseType Match2G_RequestExitMatch
+message G2Match_RequestExitMatch // IActorRequest
+{
+    int32 RpcId = 90;
+}
+
+
+message Match2G_RequestExitMatch // IActorResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
+}
+
+//ResponseType Room2Match_SendPlayers
+message Match2Room_SendPlayers // IActorRequest
+{
+	int32 RpcId = 90;
+}
+
+message Room2Match_SendPlayers // IActorResponse
+{
+	int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
+}
+
+//ResponseType Match2Room_UpdateRoomInfo
+message Room2Match_UpdateRoomInfo // IActorRequest
+{
+	int32 RpcId = 90;
+}
+
+message Match2Room_UpdateRoomInfo // IActorResponse
+{
+	int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
+}

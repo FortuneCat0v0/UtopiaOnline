@@ -699,4 +699,113 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(Match2G_EnterMatch))]
+	[Message(InnerOpcode.G2Match_EnterMatch)]
+	[ProtoContract]
+	public partial class G2Match_EnterMatch: Object, IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(2)]
+		public long UnitId { get; set; }
+
+		[ProtoMember(3)]
+		public long GateSessionActorId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.Match2G_EnterMatch)]
+	[ProtoContract]
+	public partial class Match2G_EnterMatch: Object, IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+		[ProtoMember(1)]
+		public long MatchInfoUnitInstanceId { get; set; }
+
+	}
+
+	[ResponseType(nameof(Match2G_RequestExitMatch))]
+	[Message(InnerOpcode.G2Match_RequestExitMatch)]
+	[ProtoContract]
+	public partial class G2Match_RequestExitMatch: Object, IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.Match2G_RequestExitMatch)]
+	[ProtoContract]
+	public partial class Match2G_RequestExitMatch: Object, IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+	}
+
+	[ResponseType(nameof(Room2Match_SendPlayers))]
+	[Message(InnerOpcode.Match2Room_SendPlayers)]
+	[ProtoContract]
+	public partial class Match2Room_SendPlayers: Object, IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.Room2Match_SendPlayers)]
+	[ProtoContract]
+	public partial class Room2Match_SendPlayers: Object, IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+	}
+
+	[ResponseType(nameof(Match2Room_UpdateRoomInfo))]
+	[Message(InnerOpcode.Room2Match_UpdateRoomInfo)]
+	[ProtoContract]
+	public partial class Room2Match_UpdateRoomInfo: Object, IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.Match2Room_UpdateRoomInfo)]
+	[ProtoContract]
+	public partial class Match2Room_UpdateRoomInfo: Object, IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+	}
+
 }

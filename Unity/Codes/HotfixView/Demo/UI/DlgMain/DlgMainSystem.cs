@@ -16,6 +16,10 @@ namespace ET
 			self.View.E_MakeButton.AddListener(self.OnMakeButtonClickHandler);
 			self.View.E_TaskButton.AddListener(self.OnTaskButtonClickHandler);
 			self.View.E_RankButton.AddListener(self.OnRankButtonClickHandler);
+			self.View.E_MatchButton.AddListenerAsync(()=>
+			{
+				return self.OnMatchButtonClickHandler();
+			});
 			self.View.E_ChatButton.AddListener(self.OnChatButtonClickHandler);
 			
 			RedDotHelper.AddRedDotNodeView(self.ZoneScene(), "Role", self.View.E_RoleButton.gameObject, Vector3.one, new Vector3(75,55,0));
@@ -90,6 +94,24 @@ namespace ET
 		public static void OnRankButtonClickHandler(this DlgMain self)
 		{
 			self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Rank);
+		}
+
+		public static async ETTask OnMatchButtonClickHandler(this DlgMain self)
+		{
+			// TODO 显示匹配UI
+			try
+			{
+				int errorCode = await MatchHelper.StartMatch(self.ZoneScene());
+				if (errorCode != ErrorCode.ERR_Success)
+				{
+					Log.Error(errorCode.ToString());
+					return;
+				}
+			}
+			catch (Exception e)
+			{
+				Log.Error(e.ToString());
+			}
 		}
 		
 		public static void OnChatButtonClickHandler(this DlgMain self)

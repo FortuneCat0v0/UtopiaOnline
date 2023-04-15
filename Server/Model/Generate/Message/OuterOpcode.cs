@@ -92,5 +92,9 @@ namespace ET
 		 public const ushort C2Chat_SendChatInfo = 10089;
 		 public const ushort Chat2C_SendChatInfo = 10090;
 		 public const ushort Chat2C_NoticeChatInfo = 10091;
+		 public const ushort C2Match_StartMatch = 10092;
+		 public const ushort Match2C_StartMatch = 10093;
+		 public const ushort Match2C_NoticePlayerEnter = 10094;
+		 public const ushort Match2C_NoticePlayerWait = 10095;
 	}
 }

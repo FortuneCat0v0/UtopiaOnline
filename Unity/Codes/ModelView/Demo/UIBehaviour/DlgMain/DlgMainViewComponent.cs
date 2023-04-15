@@ -296,6 +296,40 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Button E_MatchButton
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_E_MatchButton == null )
+     			{
+		    		this.m_E_MatchButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"E_Match");
+     			}
+     			return this.m_E_MatchButton;
+     		}
+     	}
+
+		public UnityEngine.UI.Image E_MatchImage
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_E_MatchImage == null )
+     			{
+		    		this.m_E_MatchImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_Match");
+     			}
+     			return this.m_E_MatchImage;
+     		}
+     	}
+
 		public void DestroyWidget()
 		{
 			this.m_E_RoleButton = null;
@@ -315,6 +349,8 @@ namespace ET
 			this.m_E_RankImage = null;
 			this.m_E_ChatButton = null;
 			this.m_E_ChatImage = null;
+			this.m_E_MatchButton = null;
+			this.m_E_MatchImage = null;
 			this.uiTransform = null;
 		}
 
@@ -335,6 +371,8 @@ namespace ET
 		private UnityEngine.UI.Image m_E_RankImage = null;
 		private UnityEngine.UI.Button m_E_ChatButton = null;
 		private UnityEngine.UI.Image m_E_ChatImage = null;
+		private UnityEngine.UI.Button m_E_MatchButton = null;
+		private UnityEngine.UI.Image m_E_MatchImage = null;
 		public Transform uiTransform = null;
 	}
 }

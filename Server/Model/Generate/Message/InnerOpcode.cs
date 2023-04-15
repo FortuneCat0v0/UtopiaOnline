@@ -48,5 +48,13 @@ namespace ET
 		 public const ushort Chat2G_EnterChat = 20045;
 		 public const ushort G2Chat_RequestExitChat = 20046;
 		 public const ushort Chat2G_RequestExitChat = 20047;
+		 public const ushort G2Match_EnterMatch = 20048;
+		 public const ushort Match2G_EnterMatch = 20049;
+		 public const ushort G2Match_RequestExitMatch = 20050;
+		 public const ushort Match2G_RequestExitMatch = 20051;
+		 public const ushort Match2Room_SendPlayers = 20052;
+		 public const ushort Room2Match_SendPlayers = 20053;
+		 public const ushort Room2Match_UpdateRoomInfo = 20054;
+		 public const ushort Match2Room_UpdateRoomInfo = 20055;
 	}
 }

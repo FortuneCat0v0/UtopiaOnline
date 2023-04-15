@@ -49,6 +49,11 @@
                             
                             //通知聊天服下线聊天Unit
                             var chat2GRequestExitChat = (Chat2G_RequestExitChat)await MessageHelper.CallActor(player.ChatInfoInstanceId,new G2Chat_RequestExitChat());
+                            
+                            // 通知匹配服下线匹配Unit
+                            var match2GRequestExitMatch =
+                                    (Match2G_RequestExitMatch)await MessageHelper.CallActor(player.MatchInfoInstanceId,
+                                        new G2Match_RequestExitMatch());
 
                             //通知移除账号角色登录信息
                             long LoginCenterConfigSceneId = StartSceneConfigCategory.Instance.LoginCenterConfig.InstanceId;

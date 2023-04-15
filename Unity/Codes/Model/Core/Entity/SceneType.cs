@@ -18,6 +18,10 @@
 		
 		ChatInfo = 11,
 		
+		Match = 12,
+		
+		Room = 13,
+		
 		// 客户端Model层
 		Client = 30,
 		Zone = 31,

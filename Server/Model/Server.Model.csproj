@@ -98,6 +98,10 @@
       <Link>Module\Actor\IActorChatInfoMessage.cs</Link>
     </Compile>
 
+    <Compile Include="..\..\Unity\Codes\Model\Module\Actor\IActorMatchMessage.cs">
+      <Link>Module\Actor\IActorMatchMessage.cs</Link>
+    </Compile>
+
     <Compile Include="..\..\Unity\Codes\Model\Module\Actor\IActorRankInfoMessage.cs">
       <Link>Module\Actor\IActorRankInfoMessage.cs</Link>
     </Compile>
